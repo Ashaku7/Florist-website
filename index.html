@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#1c1d1f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="icons/icon1.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="icons/icon2.png" sizes="512x512">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon1.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon2.png">
 
 </head>
 <body>
@@ -22,6 +28,10 @@
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="cart-icon" id="cartIcon">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
     </nav>
 
     <!-- Hero -->
@@ -78,7 +88,11 @@
                     <div class="product-info">
                         <h4>Rose Bouquets</h4>
                         <p>Premium fresh roses in vibrant colors</p>
-                        <span class="price">From ₹500</span>
+                        <span class="price">₹500</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Rose Bouquets" data-price="500">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Rose Bouquets" data-price="500">Buy Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card">
@@ -86,7 +100,11 @@
                     <div class="product-info">
                         <h4>Lily Arrangements</h4>
                         <p>Elegant lilies for special occasions</p>
-                        <span class="price">From ₹800</span>
+                        <span class="price">₹800</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Lily Arrangements" data-price="800">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Lily Arrangements" data-price="800">Buy Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card">
@@ -94,7 +112,11 @@
                     <div class="product-info">
                         <h4>Mixed Bouquets</h4>
                         <p>Beautiful combination of seasonal flowers</p>
-                        <span class="price">From ₹600</span>
+                        <span class="price">₹600</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Mixed Bouquets" data-price="600">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Mixed Bouquets" data-price="600">Buy Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card">
@@ -102,7 +124,11 @@
                     <div class="product-info">
                         <h4>Orchid Plants</h4>
                         <p>Exotic orchids that last longer</p>
-                        <span class="price">From ₹1200</span>
+                        <span class="price">₹1200</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Orchid Plants" data-price="1200">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Orchid Plants" data-price="1200">Buy Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card">
@@ -110,7 +136,11 @@
                     <div class="product-info">
                         <h4>Sunflowers</h4>
                         <p>Bright and cheerful sunflower bunches</p>
-                        <span class="price">From ₹450</span>
+                        <span class="price">₹450</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Sunflowers" data-price="450">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Sunflowers" data-price="450">Buy Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card">
@@ -118,7 +148,47 @@
                     <div class="product-info">
                         <h4>Carnations</h4>
                         <p>Long-lasting colorful carnations</p>
-                        <span class="price">From ₹400</span>
+                        <span class="price">₹400</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Carnations" data-price="400">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Carnations" data-price="400">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=400&h=400&fit=crop" alt="Tulips">
+                    <div class="product-info">
+                        <h4>Tulip Bouquets</h4>
+                        <p>Beautiful seasonal tulips in assorted colors</p>
+                        <span class="price">₹550</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Tulip Bouquets" data-price="550">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Tulip Bouquets" data-price="550">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=400&h=400&fit=crop" alt="Gerbera">
+                    <div class="product-info">
+                        <h4>Gerbera Daisies</h4>
+                        <p>Colorful gerberas perfect for cheerful arrangements</p>
+                        <span class="price">₹350</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Gerbera Daisies" data-price="350">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Gerbera Daisies" data-price="350">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1464695110811-dcf3903dc2f4?w=400&h=400&fit=crop" alt="Lavender">
+                    <div class="product-info">
+                        <h4>Lavender Bundles</h4>
+                        <p>Fragrant lavender for aromatherapy and decor</p>
+                        <span class="price">₹300</span>
+                        <div class="product-buttons">
+                            <button class="btn-add-cart" data-product="Lavender Bundles" data-price="300">Add to Cart</button>
+                            <button class="btn-buy-now" data-product="Lavender Bundles" data-price="300">Buy Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -275,287 +345,53 @@
         </div>
     </footer>
 
-    <!-- Floating Contact -->
-    <div class="floating">
-        <a href="https://wa.me/919841008008" class="whatsapp" title="WhatsApp">💬</a>
-        <a href="tel:+919841008008" class="phone" title="Call Us">📞</a>
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌸POO KADAI - Chennai's Premier Flower Specialist</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <a href="#" class="logo">🌸POO KADAI</a>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Chennai's Premier Flower Specialist</h1>
-            <p>Crafting beautiful memories since 2025</p>
-            <a href="#contact" class="btn">Get Quote</a>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?w=800&h=600&fit=crop" alt="🌸POO KADAI">
-                </div>
-                <div class="about-text">
-                    <h3>Welcome to 🌸POO KADAI</h3>
-                    <h2>Chennai's Topmost Flower Specialist Since 2025</h2>
-                    <p>With over 25 years of experience, we've been transforming special moments into unforgettable memories. Our expert team uses only the freshest, highest quality flowers.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <span>✓</span>
-                            <p>100% Fresh Flowers</p>
-                        </div>
-                        <div class="feature">
-                            <span>✓</span>
-                            <p>Expert Team</p>
-                        </div>
-                        <div class="feature">
-                            <span>✓</span>
-                            <p>Custom Designs</p>
-                        </div>
-                        <div class="feature">
-                            <span>✓</span>
-                            <p>Affordable Prices</p>
-                        </div>
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="orderItems"></div>
+                    <div class="summary-total">
+                        <strong>Total Price: </strong>
+                        <strong id="modalTotal">₹0</strong>
                     </div>
                 </div>
+                <form id="checkoutForm">
+                    <h3>Delivery Details</h3>
+                    <input type="text" id="customerName" placeholder="Full Name" required>
+                    <input type="email" id="customerEmail" placeholder="Email Address" required>
+                    <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+                    <textarea id="customerAddress" placeholder="Delivery Address" required></textarea>
+                    <input type="date" id="deliveryDate" required>
+                    <textarea id="specialNotes" placeholder="Special Notes/Instructions (Optional)"></textarea>
+                    <button type="submit" class="btn-place-order">Place Order</button>
+                </form>
             </div>
         </div>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="products">
-        <div class="container">
-            <h3>Our Products</h3>
-            <h2>Beautiful Flowers & Bouquets</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=400&h=400&fit=crop" alt="Rose Bouquet">
-                    <div class="product-info">
-                        <h4>Rose Bouquets</h4>
-                        <p>Premium fresh roses in vibrant colors</p>
-                        <span class="price">From ₹500</span>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=400&h=400&fit=crop" alt="Lily Arrangements">
-                    <div class="product-info">
-                        <h4>Lily Arrangements</h4>
-                        <p>Elegant lilies for special occasions</p>
-                        <span class="price">From ₹800</span>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&h=400&fit=crop" alt="Mixed Bouquets">
-                    <div class="product-info">
-                        <h4>Mixed Bouquets</h4>
-                        <p>Beautiful combination of seasonal flowers</p>
-                        <span class="price">From ₹600</span>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=400&h=400&fit=crop" alt="Orchids">
-                    <div class="product-info">
-                        <h4>Orchid Plants</h4>
-                        <p>Exotic orchids that last longer</p>
-                        <span class="price">From ₹1200</span>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1518895312237-a9e23508077d?w=400&h=400&fit=crop" alt="Sunflowers">
-                    <div class="product-info">
-                        <h4>Sunflowers</h4>
-                        <p>Bright and cheerful sunflower bunches</p>
-                        <span class="price">From ₹450</span>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=400&h=400&fit=crop" alt="Carnations">
-                    <div class="product-info">
-                        <h4>Carnations</h4>
-                        <p>Long-lasting colorful carnations</p>
-                        <span class="price">From ₹400</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="services">
-        <div class="container">
-            <h3>Our Services</h3>
-            <h2>Exceptional Floral Expertise</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎂</div>
-                    <h4>Birthday Decorations</h4>
-                    <p>Vibrant and joyful flower arrangements to make birthdays extra special with custom themes and colors.</p>
-                    <ul>
-                        <li>Balloon & Flower Combos</li>
-                        <li>Theme-based Decor</li>
-                        <li>Cake Table Arrangements</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💐</div>
-                    <h4>Wedding Decorations</h4>
-                    <p>Elegant and stunning arrangements for your dream wedding with personalized designs and fresh blooms.</p>
-                    <ul>
-                        <li>Mandap Decorations</li>
-                        <li>Wedding Garlands</li>
-                        <li>Venue Arrangements</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💼</div>
-                    <h4>Corporate Events</h4>
-                    <p>Professional floral solutions for business events, conferences, and office spaces with modern aesthetics.</p>
-                    <ul>
-                        <li>Office Arrangements</li>
-                        <li>Event Decorations</li>
-                        <li>Weekly Subscriptions</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎉</div>
-                    <h4>Special Events</h4>
-                    <p>Custom arrangements for anniversaries, parties, and celebrations with creative and unique designs.</p>
-                    <ul>
-                        <li>Anniversary Specials</li>
-                        <li>Party Decorations</li>
-                        <li>Custom Requests</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h3>Our Work</h3>
-            <h2>Beautiful Moments We Created</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop" alt="Wedding">
-                    <div class="overlay">
-                        <span>Wedding Decoration</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=400&fit=crop" alt="Birthday">
-                    <div class="overlay">
-                        <span>Birthday Party</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="corporate.png" alt="Corporate">
-                    <div class="overlay">
-                        <span>Corporate Event</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=400&h=400&fit=crop" alt="Bouquet">
-                    <div class="overlay">
-                        <span>Custom Bouquet</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="floral.png" alt="Arrangement">
-                    <div class="overlay">
-                        <span>Floral Arrangement</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?w=400&h=400&fit=crop" alt="Event">
-                    <div class="overlay">
-                        <span>Special Event</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat">
-                    <h3>25+</h3>
-                    <p>Years Experience</p>
-                </div>
-                <div class="stat">
-                    <h3>500+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="stat">
-                    <h3>1000+</h3>
-                    <p>Events Decorated</p>
-                </div>
-                <div class="stat">
-                    <h3>100%</h3>
-                    <p>Satisfaction</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>🌸POO KADAI</h3>
-                    <p>Chennai's trusted flower specialist since 2025. We bring beauty and elegance to your special moments.</p>
-                </div>
-                <div>
-                    <h3>Quick Links</h3>
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#products">Products</a>
-                    <a href="#services">Services</a>
-                </div>
-                <div>
-                    <h3>Contact Info</h3>
-                    <p>📞 +91 98410 08008</p>
-                    <p>📞 +91 98410 74333</p>
-                    <p>📧 pookadai@gmail.com</p>
-                </div>
-                <div>
-                    <h3>Visit Us</h3>
-                    <p>No: 65/7, C.P Ramaswamy Road,<br>Abhiramapuram,<br>Chennai – 600 018</p>
-                    <p><strong>Open Daily:</strong> 6 AM - 9 PM</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
 
     <!-- Floating Contact -->
     <div class="floating">
@@ -563,7 +399,22 @@
         <a href="tel:+919841008008" class="phone" title="Call Us">📞</a>
     </div>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+        <script src="cart.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('service-worker.js')
+                        .then(function(registration) {
+                            // Registration successful
+                            // console.log('ServiceWorker registration successful:', registration);
+                        })
+                        .catch(function(error) {
+                            // Registration failed
+                            // console.log('ServiceWorker registration failed:', error);
+                        });
+                });
+            }
+        </script>
 </body>
->>>>>>> 871c44caab219b8a1cc7a09f08cd6cc3ea4d476c
 </html>
